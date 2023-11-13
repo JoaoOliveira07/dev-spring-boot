@@ -1,0 +1,51 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-18bb3b68a20-684f4d2962a1c7bf": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "teste",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3487",
+				"database": "curso_java",
+				"url": "jdbc:postgresql://localhost:3487/curso_java",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {},
+				"auth-model": "native"
+			}
+		},
+		"postgres-jdbc-18bb3b79376-299692df7c9c3a93": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "springstudent",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3487",
+				"database": "springstudent",
+				"url": "jdbc:postgresql://localhost:3487/springstudent",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {},
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Desenvolvimento",
+			"color": "255,255,255",
+			"description": "Banco de dados de desenvolvimento",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800
+		}
+	}
+}
