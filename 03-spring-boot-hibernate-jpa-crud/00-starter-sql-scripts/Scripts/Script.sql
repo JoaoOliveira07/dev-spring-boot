@@ -6,15 +6,16 @@ select * from authorities
 
 select * from roles
 
-select * from members
+select * from estacionamento_segs
 
 
 
-CREATE TABLE employee (
+CREATE TABLE registro (
   id SERIAL PRIMARY KEY,
-  first_name varchar(45),
-  last_name varchar(45),
-  email varchar(45)
+  placa varchar(7),
+  times varchar(30),
+  ano_carro varchar(4),
+  tipo_automovel varchar(15)
 );
 
 -- Insert data

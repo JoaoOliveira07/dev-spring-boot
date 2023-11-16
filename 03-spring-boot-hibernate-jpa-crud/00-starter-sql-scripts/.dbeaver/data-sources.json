@@ -13,7 +13,6 @@
 				"url": "jdbc:postgresql://localhost:3487/curso_java",
 				"configurationType": "MANUAL",
 				"type": "dev",
-				"provider-properties": {},
 				"auth-model": "native"
 			}
 		},
