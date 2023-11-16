@@ -1,15 +1,14 @@
-select * from employee
+CREATE DATABASE  IF NOT EXISTS `employee_directory`;
+USE `employee_directory`;
 
-select * from users 
+--
+-- Table structure for table `employee`
+--
 
-select * from authorities
+-- Drop table if exists
+DROP TABLE IF EXISTS employee;
 
-select * from roles
-
-select * from members
-
-
-
+-- Create table
 CREATE TABLE employee (
   id SERIAL PRIMARY KEY,
   first_name varchar(45),
@@ -24,3 +23,5 @@ INSERT INTO employee (first_name, last_name, email) VALUES
   ('Avani', 'Gupta', 'avani@luv2code.com'),
   ('Yuri', 'Petrov', 'yuri@luv2code.com'),
   ('Juan', 'Vega', 'juan@luv2code.com');
+
+
