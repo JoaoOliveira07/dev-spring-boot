@@ -27,23 +27,29 @@
         <!-- Add hidden form field to handle update -->
         <input type="hidden" th:field="*{id}" />
 
+        <h6>Placa</h6>
         <input type="text" th:field="*{placa}"
-               class="form-control mb-4 w-25" placeholder="Placa">
+               class="form-control mb-4 w-25" placeholder="MIG8223">
 
+        <h6>Modelo</h6>
         <input type="text" th:field="*{modelo}"
-               class="form-control mb-4 w-25" placeholder="Modelo">
+               class="form-control mb-4 w-25" placeholder="Clio">
 
+        <h6>Ano</h6>
         <input type="text" th:field="*{ano}"
-               class="form-control mb-4 w-25" placeholder="Ano">
+               class="form-control mb-4 w-25" placeholder="2011">
 
+        <h6>Tipo do Veículo</h6>
         <input type="text" th:field="*{tipo}"
-               class="form-control mb-4 w-25" placeholder="Tipo">
+               class="form-control mb-4 w-25" placeholder="Carro">
 
+        <h6>Horário de entrada</h6>
         <input type="text" th:field="*{entrada}"
-               class="form-control mb-4 w-25" placeholder="Entrada data/hora">
+               class="form-control mb-4 w-25" placeholder="January 7, 2023 10:00:00">
 
+        <h6>Horário de saída</h6>
         <input type="text" th:field="*{saida}"
-               class="form-control mb-4 w-25" placeholder="Saida data/hora">
+               class="form-control mb-4 w-25" placeholder="January 7, 2023 10:00:00">
 
         <button type="submit" class="btn btn-info col-2">Salvar</button>
 

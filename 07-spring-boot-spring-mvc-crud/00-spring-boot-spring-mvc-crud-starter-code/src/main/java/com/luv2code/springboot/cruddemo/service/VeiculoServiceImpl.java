@@ -7,6 +7,7 @@ import org.springframework.expression.ParseException;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,6 +46,7 @@ public class VeiculoServiceImpl implements VeiculoService {
     @Override
     public void save(Veiculo theVeiculo) {
         veiculoRepository.save(theVeiculo);
+        theVeiculo.calcularValor(theVeiculo);
     }
 
     @Override

@@ -6,8 +6,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 
 @Entity
 @Table(name="veiculos")
@@ -33,10 +35,10 @@ public class Veiculo {
     private String tipo;
 
     @Column(name = "entrada")
-    private Date entrada;
+    private LocalDateTime entrada;
 
     @Column(name = "saida")
-    private Date saida;
+    private LocalDateTime saida;
 
     @Column(name = "valor")
     private double valor;
@@ -96,19 +98,19 @@ public class Veiculo {
         this.tipo = tipo;
     }
 
-    public Date getEntrada() {
+    public LocalDateTime getEntrada() {
         return entrada;
     }
 
-    public void setEntrada(Date entrada) {
+    public void setEntrada(LocalDateTime entrada) {
         this.entrada = entrada;
     }
 
-    public Date getSaida() {
+    public LocalDateTime getSaida() {
         return saida;
     }
 
-    public void setSaida(Date saida) {
+    public void setSaida(LocalDateTime saida) {
         this.saida = saida;
     }
 
@@ -122,7 +124,7 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Veiculo{" +
                 "id=" + id +
                 ", placa='" + placa + '\'' +
                 ", modelo='" + modelo + '\'' +
@@ -131,8 +133,9 @@ public class Veiculo {
                 '}';
     }
 
-    public void calcularValor() {
-        long tempoEstacionado = (saida.getTime() - entrada.getTime()) / (60 * 60 * 1000); // em horas
+    @PostMapping("/valor")
+    public Double calcularValor(Veiculo theVeiculo) {
+        long tempoEstacionado = ChronoUnit.HOURS.between(saida, entrada); // em horas
 
         if (tempoEstacionado <= 1) {
             valor = 2.0;
@@ -143,5 +146,6 @@ public class Veiculo {
         } else {
             valor = 5.0 + 2.0 * (tempoEstacionado - 3);
         }
+        return valor;
     }
 }

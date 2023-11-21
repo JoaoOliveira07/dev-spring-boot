@@ -6,7 +6,7 @@ select * from authorities
 
 select * from roles
 
-select * from estacionamento_segs
+select * from veiculos
 
 
 
@@ -25,3 +25,5 @@ INSERT INTO employee (first_name, last_name, email) VALUES
   ('Avani', 'Gupta', 'avani@luv2code.com'),
   ('Yuri', 'Petrov', 'yuri@luv2code.com'),
   ('Juan', 'Vega', 'juan@luv2code.com');
+
+ 

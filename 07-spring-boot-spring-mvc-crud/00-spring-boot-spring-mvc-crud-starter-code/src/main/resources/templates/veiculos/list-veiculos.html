@@ -53,7 +53,7 @@
             <td th:text="${tempVeiculo.tipo}" />
             <td th:text="${tempVeiculo.entrada}" />
             <td th:text="${tempVeiculo.saida}" />
-            <td th:text="${tempVeiculo.valor}" />
+            <td th:text="${tempVeiculo.valor}" th:action="@{/valor}" method="POST"/>
             <td>
                 <div class="row">
 
@@ -62,7 +62,7 @@
                         <form action="#" th:action="@{/veiculos/showFormForUpdate}" method="POST">
 
                             <input type="hidden" name="veiculoId" th:value="${tempVeiculo.id}" />
-                            <button type="submit" class="btn btn-info btn-sm me-1" style="float:left;">Inserir Saida</button>
+                            <button type="submit" class="btn btn-info btn-sm me-1" style="float:left;">Saída</button>
 
                         </form>
 
