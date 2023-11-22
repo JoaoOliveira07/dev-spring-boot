@@ -25,5 +25,17 @@ INSERT INTO employee (first_name, last_name, email) VALUES
   ('Avani', 'Gupta', 'avani@luv2code.com'),
   ('Yuri', 'Petrov', 'yuri@luv2code.com'),
   ('Juan', 'Vega', 'juan@luv2code.com');
+ 
+ select * from instructor i 
+ 
+ select * from course c
+ 
+ select * from review r
+ 
+ select * from instructor_detail id
+ 
+ select * from student s 
+ 
+ select * from course_student cs 
 
  
